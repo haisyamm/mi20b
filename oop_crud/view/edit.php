@@ -34,16 +34,15 @@ if($isi['jenis_surat']=='1'){
 		<div class="card">
 		<H2 align="center">Edit Surat</H2>
 		<div class="card-body">
-		    <form class="row g-3" action="<?php $ctrl->updateSurat();?>" method="post" name="form1">
-		  	<input type="hidden" class="form-control" id="id" name="id" value="<?php echo $id;?>">
+		 <form class="row g-3" action="<?php echo $ctrl->updateSurat($id);?>" method="post" name="form1">
 		  <div class="col-md-6">
 		    <label for="noSurat" class="form-label">Nomor Surat</label>
-		    <input type="text" class="form-control" id="noSurat" name="noSurat" value="<?php echo $isi['no_surat'] ?>" placeholder="SK-2021-09001">
+		    <input type="text" class="form-control" id="noSurat" name="noSurat" value="<?php echo $isi['no_surat'] ?>">
 		  </div>
 		  <div class="col-md-6">
 		    <label for="jenisSurat" class="form-label">Jenis Surat</label>
 		    <select id="jenisSurat" name="jenisSurat" class="form-select">
-		      <option selected  value="<?php echo $isi['jenis_surat'] ?>"><?php echo $js ?></option>
+		      <option selected value="<?php echo $isi['jenis_surat'] ?>"><?php echo $js ?></option>
 		      <?php 
 		      foreach ($jenis as $js) {
 		      	?>
@@ -55,19 +54,19 @@ if($isi['jenis_surat']=='1'){
 		  </div>
 		  <div class="col-md-12">
 		    <label for="tglSurat" class="form-label">Tanggal Surat</label>
-		    <input type="date" class="form-control" id="tglSurat" name="tglSurat"  value="<?php echo $isi['tgl_surat'] ?>">
+		    <input type="date" class="form-control" id="tglSurat" name="tglSurat" value="<?php echo $isi['tgl_surat'] ?>">
 		  </div>
 		  	<div class="col-md-12">
 		    <label for="ttdSurat" class="form-label">Pembuat Surat</label>
-		    <input type="text" class="form-control" id="ttdSurat" name="ttdSurat" placeholder="Unyil"  value="<?php echo $isi['ttd_surat'] ?>">
+		    <input type="text" class="form-control" id="ttdSurat" name="ttdSurat" value="<?php echo $isi['ttd_surat'] ?>">
 			</div>
 		  <div class="col-md-6">
 		    <label for="ttdMenyetujui" class="form-label">Menyetujui</label>
-		    <input type="text" class="form-control" id="ttdMenyetujui" name="ttdMenyetujui" placeholder="Usro"  value="<?php echo $isi['ttd_menyetujui'] ?>">
+		    <input type="text" class="form-control" id="ttdMenyetujui" name="ttdMenyetujui" value="<?php echo $isi['ttd_menyetujui'] ?>">
 		  </div>
 		    <div class="col-md-6">
 		    <label for="ttdMengetahui" class="form-label">Mengetahui</label>
-		    <input type="text" class="form-control" id="ttdMengetahui" name="ttdMengetahui" placeholder="Pa RT"  value="<?php echo $isi['ttd_mengetahui'] ?>">
+		    <input type="text" class="form-control" id="ttdMengetahui" name="ttdMengetahui" value="<?php echo $isi['ttd_mengetahui'] ?>">
 		  </div>
 		  <div class="col-12">
 		    <button type="submit" class="btn btn-primary" name="update">Update</button>
