@@ -90,10 +90,10 @@ $(document).ready(function(){
 //alert('test');
 	show_jenis();  //memanggil function yang ada di bawah
 	//
-	function show_jenis(){ //untuk menampilkan data product
+	function show_jenis(){ 
 	  $.ajax({
 	    type  : 'GET',
-	    url   : 'api.php', //Memanggil Controller/Function
+	    url   : 'api.php', 
 	    async : false,
 	    dataType : 'json',
 	    success : function(data){
@@ -107,7 +107,7 @@ $(document).ready(function(){
 	            '<option value="'+data[i].id_js+'">'+data[i].jenis_surat+'</option>';                ;
 	      } // akhir dari looping
 
-	      $('#jenisSurat').html(html); // mengirim data
+	      $('#jenisSurat').html(html);
 	    }      
 	  });
 	}
